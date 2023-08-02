@@ -1,6 +1,10 @@
 
 import 'package:flutter/material.dart';
 import 'package:todo/color/usecolor.dart';
+<<<<<<< HEAD
+=======
+import 'package:todo/widget/todolist.dart';
+>>>>>>> 6857afb (Initial commit)
 
 class Home extends StatelessWidget {
   const Home({super.key});
@@ -23,6 +27,7 @@ class Home extends StatelessWidget {
           ],
         ),
       ),
+<<<<<<< HEAD
       body: Container(
         padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 15),
         child: Column(
@@ -70,6 +75,60 @@ class Home extends StatelessWidget {
             ),
           ],
         ),
+=======
+      body: Stack(
+        children: [
+          Container(
+            padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 15),
+            child: Column(
+              children: [
+                Container(
+                  padding: const EdgeInsets.symmetric(horizontal: 15),
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(20.00),
+                  ),
+                  child: const TextField(
+                    decoration: InputDecoration(
+                      contentPadding: EdgeInsets.all(0),
+                      prefixIcon: Icon(
+                        Icons.search,
+                        size: 20),
+                      prefixIconConstraints: BoxConstraints(
+                        maxHeight: 25,
+                        maxWidth: 20,
+                      ),
+                      border: InputBorder.none,
+                      hintText: "Search",
+                      hintStyle: TextStyle(
+                        color: Colors.grey
+                      ),
+                    ),
+                  ),
+                ),
+                ListView(
+                  scrollDirection: Axis.vertical,
+                  shrinkWrap: true,
+                  children: [
+                    Container(
+                      margin: const EdgeInsets.only(top: 40, bottom: 15),
+                      child: const Text(
+                        "TODO",
+                        style: TextStyle(
+                          color: Colors.black45,
+                          fontSize: 40,
+                          fontWeight: FontWeight.bold
+                        ),
+                      ),
+                    ),
+                    TodoList(),
+                  ],
+                ),
+              ],
+            ),
+          ),
+        ],
+>>>>>>> 6857afb (Initial commit)
       ),
     );
   }
